@@ -11,4 +11,10 @@ class ContatosModel extends Model
     public function listar(){
         return $this->findAll();
     }
+
+    public function buscarPorId($id){
+        return $this->asArray()
+            ->where(['id' => $id])
+            ->first();
+    }
 }
